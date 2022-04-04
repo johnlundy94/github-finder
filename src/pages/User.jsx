@@ -35,7 +35,13 @@ function User() {
     return <Spinner />;
   }
 
-  return <div>{user.login}</div>;
+  return (
+    <>
+      <div className="w-full mx -auto lg:w-10/12">
+        <div className="mb-4"></div>
+      </div>
+    </>
+  );
 }
 
 export default User;
