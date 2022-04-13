@@ -1,7 +1,6 @@
 import { FaCodepen, FaStore, FaUserFriends, FaUsers } from "react-icons/fa";
 import { useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Spinner from "../components/layout/Spinner";
 import RepoList from "../components/repos/RepoList";
 import GithubContext from "../context/github/GithubContext";
@@ -42,6 +41,8 @@ function User() {
   if (loading) {
     return <Spinner />;
   }
+
+  const websiteUrl = blog?.startsWith("http") ? blog : "https://" + blog;
 
   return (
     <>
